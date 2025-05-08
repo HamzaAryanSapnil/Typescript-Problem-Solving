@@ -11,14 +11,14 @@ You should already infer this question's answer using the name TypeScript. TypeS
 And "Script" connects it to JavaScript, showing that it’s not a new language from scratch, but a superset of JavaScript, meaning all valid JavaScript code is also valid TypeScript code. Here is an example of it. 
 
 
-
+```
 # function filterByRating(
 #  items: { title: string; rating: number }[]
 # ): { title: string; rating: number }[] {
 #  const filteredItem = items?.filter((item) => item.rating >= 4);
 #  return filteredItem;
 # }
-
+```
 
 ![javscriptFunction](https://i.ibb.co.com/dJkpSYTQ/javascript-function.png)
 
@@ -85,6 +85,7 @@ Enums are one of the few features TypeScript has which is not a type-level exten
 Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
 
 #Example
+```
 enum Day {
   Monday = 1, // 1
   Tuesday, // 2
@@ -114,17 +115,18 @@ enum Day {
  const result1 = getDay(Day.Monday) // output: Middle Of The Week
  
  console.log(result, result1);
-
+```
 
 
 enum Day{...} Like this, we can define an enum type with three members.
 Behind the scenes, it assigns them as numeric values like: Above, we have a numeric enum where Monday is initialized with 1. All of the following members are auto-incremented from that point on. In other words, Day.Monday has the value 1, Tuesday has 2 And Friday has 3
+
 Day.Monday   // 1
 
 Day.Tuesday  // 2
 
 Day.Friday   // 3
-
+```
 enum Day {
 
   Monday // 0
@@ -133,6 +135,7 @@ enum Day {
   
   Friday // 2
 }
+```
 By Default it starts from 0. But as I initialized Monday with 1 as default so it started from 1.
 Here in the function parameter what I do just access any member as a property off of the enum itself, and declare types using the name of the enum.
 So I can use Day.Monday (getDay(Day.Monday)), and TypeScript will treat it as the number 1.
