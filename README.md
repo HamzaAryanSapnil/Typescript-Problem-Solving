@@ -91,30 +91,35 @@ enum Day {
   Friday // 3
 }
 
-function getDay(day: Day): string {
-  if (
-    day === Day.Monday ||
-    day === Day.Tuesday
-  ) {
-    return "Middle Of The Week";
-  }
-  return "Weekend";
-}
-const result = getDay(Day.Friday) // output: Weekend
-const result1 = getDay(Day.Monday) // output: Middle Of The Week
-console.log(result, result1);
+# function getDay(day: Day): string {
+ #  if (
+ #   day === Day.Monday ||
+ #   day === Day.Tuesday
+ # ) {
+ #   return "Middle Of The Week";
+ # }
+ # return "Weekend";
+# }
+# const result = getDay(Day.Friday) // output: Weekend
+# const result1 = getDay(Day.Monday) // output: Middle Of The Week
+# console.log(result, result1);
 
 
 
 enum Day{...} Like this, we can define an enum type with three members.
 Behind the scenes, it assigns them as numeric values like: Above, we have a numeric enum where Monday is initialized with 1. All of the following members are auto-incremented from that point on. In other words, Day.Monday has the value 1, Tuesday has 2 And Friday has 3
 Day.Monday   // 1
+
 Day.Tuesday  // 2
+
 Day.Friday   // 3
 
 enum Day {
+
   Monday // 0
+  
   Tuesday, // 1
+  
   Friday // 2
 }
 By Default it starts from 0. But as I initialized Monday with 1 as default so it started from 1.
