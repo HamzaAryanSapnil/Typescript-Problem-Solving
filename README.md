@@ -77,3 +77,53 @@ Another key benefit of using TypeScript is its improved readability. By providin
 In conclusion, TypeScript is a powerful programming language that can significantly improve code maintainability and scalability. By providing a strong typing system, advanced features, and enhanced readability, TypeScript helps developers write cleaner, more efficient code that is easier to understand and maintain.
 According to a survey conducted by Stack Overflow in 2024, TypeScript was ranked as one of the most loved programming languages by developers, with 76.6% expressing interest in continuing to work with it. This can be attributed to the language's strong typing system, which provides a level of safety and predictability that is highly valued in software development.
 Overall, adopting TypeScript can be a game-changer for software development teams looking to improve their code quality, reduce bugs, and enhance team collaboration.
+
+
+# What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+
+Enums are one of the few features TypeScript has which is not a type-level extension of JavaScript.
+Enums allow a developer to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases. TypeScript provides both numeric and string-based enums.
+
+#Example
+enum Day {
+  Monday = 1, // 1
+  Tuesday, // 2
+  Friday // 3
+}
+
+function getDay(day: Day): string {
+  if (
+    day === Day.Monday ||
+    day === Day.Tuesday
+  ) {
+    return "Middle Of The Week";
+  }
+  return "Weekend";
+}
+const result = getDay(Day.Friday) // output: Weekend
+const result1 = getDay(Day.Monday) // output: Middle Of The Week
+console.log(result, result1);
+
+
+
+enum Day{...} Like this, we can define an enum type with three members.
+Behind the scenes, it assigns them as numeric values like: Above, we have a numeric enum where Monday is initialized with 1. All of the following members are auto-incremented from that point on. In other words, Day.Monday has the value 1, Tuesday has 2 And Friday has 3
+Day.Monday   // 1
+Day.Tuesday  // 2
+Day.Friday   // 3
+
+enum Day {
+  Monday // 0
+  Tuesday, // 1
+  Friday // 2
+}
+By Default it starts from 0. But as I initialized Monday with 1 as default so it started from 1.
+Here in the function parameter what I do just access any member as a property off of the enum itself, and declare types using the name of the enum.
+So I can use Day.Monday (getDay(Day.Monday)), and TypeScript will treat it as the number 1.
+This function takes a day of type Day (the enum I've defined).
+If the day is either Monday (1) or Tuesday (2), it returns "Middle Of The Week".
+Otherwise ( Friday, which is 3), it returns "Weekend". 
+
+
+
+So, We can say in TypeScript an enum is a user-defined type that allows us to assign friendly names to a set of numeric or string constant values, making our code more readable and manageable.
