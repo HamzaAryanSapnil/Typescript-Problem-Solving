@@ -91,18 +91,29 @@ enum Day {
   Friday // 3
 }
 
-# function getDay(day: Day): string {
- #  if (
- #   day === Day.Monday ||
- #   day === Day.Tuesday
- # ) {
- #   return "Middle Of The Week";
- # }
- # return "Weekend";
-# }
-# const result = getDay(Day.Friday) // output: Weekend
-# const result1 = getDay(Day.Monday) // output: Middle Of The Week
-# console.log(result, result1);
+ function getDay(day: Day): string {
+ 
+   if (
+   
+    day === Day.Monday ||
+   
+    day === Day.Tuesday
+  
+  ) {
+  
+   return "Middle Of The Week";
+  
+  }
+  
+  return "Weekend";
+ 
+ }
+ 
+ const result = getDay(Day.Friday) // output: Weekend
+ 
+ const result1 = getDay(Day.Monday) // output: Middle Of The Week
+ 
+ console.log(result, result1);
 
 
 
