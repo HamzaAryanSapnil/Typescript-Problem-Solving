@@ -139,7 +139,7 @@ enum Day {
 By Default it starts from 0. But as I initialized Monday with 1 as default so it started from 1.
 
 Here in the function parameter what I do just access any member as a property off of the enum itself, and declare types using the name of the enum.
-So I can use ### Day.Monday (getDay(Day.Monday)) ###, and TypeScript will treat it as the number 1.
+So I can use  <ins> Day.Monday (getDay(Day.Monday)) </ins> , and TypeScript will treat it as the number 1.
 This function takes a day of type Day (the enum I've defined).
 If the day is either Monday (1) or Tuesday (2), it returns "Middle Of The Week".
 Otherwise ( Friday, which is 3), it returns "Weekend". 
