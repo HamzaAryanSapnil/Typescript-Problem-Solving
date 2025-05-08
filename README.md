@@ -15,7 +15,7 @@ And "Script" connects it to JavaScript, showing that it’s not a new language f
 
 ![typescriptFunction](https://i.ibb.co.com/YBznDWXJ/typescript-function.png)
 
-![javscriptFunction](https://i.ibb.co.com/dJkpSYTQ/javascript-function.png)
+
 
 
 
