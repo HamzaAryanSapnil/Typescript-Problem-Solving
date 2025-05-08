@@ -12,13 +12,12 @@ And "Script" connects it to JavaScript, showing that it’s not a new language f
 
 
 
-
-function filterByRating(
-  items: { title: string; rating: number }[]
-): { title: string; rating: number }[] {
-  const filteredItem = items?.filter((item) => item.rating >= 4);
-  return filteredItem;
-}
+# function filterByRating(
+#  items: { title: string; rating: number }[]
+# ): { title: string; rating: number }[] {
+#  const filteredItem = items?.filter((item) => item.rating >= 4);
+#  return filteredItem;
+# }
 
 
 ![javscriptFunction](https://i.ibb.co.com/dJkpSYTQ/javascript-function.png)
